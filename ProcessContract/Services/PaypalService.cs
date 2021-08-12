@@ -20,7 +20,7 @@ namespace ProcessContract.Services
          */
         public double Interest (double amount, int month)
         {
-            return (amount * (month / 100)) + amount;
+            return amount * (month / 100.00) + amount;
         }
     }
 }
