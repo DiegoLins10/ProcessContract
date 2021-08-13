@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace ProcessContract.Entities
 {
@@ -33,5 +34,15 @@ namespace ProcessContract.Entities
             Installment.Remove(installment);
         }
 
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (Installment insta in Installment)
+            {
+                sb.AppendLine(insta.ToString());
+            }
+            return sb.ToString();
+        }
     }
 }
